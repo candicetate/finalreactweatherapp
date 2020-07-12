@@ -5,8 +5,8 @@ export default function Emoji(props) {
   return (
     <ReactAnimatedWeather
       icon="CLEAR_DAY"
-      color="grey"
-      size={25}
+      color="black"
+      size={80}
       animate={true}
     />
   );
