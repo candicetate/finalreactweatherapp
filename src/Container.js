@@ -3,6 +3,7 @@ import "./Container.css";
 import "./SearchBar.css";
 import CurrentInfo from "./CurrentInfo";
 import Forecast from "./Forecast";
+import Loader from "react-loader-spinner";
 
 import axios from "axios";
 
@@ -85,14 +86,6 @@ export default function Weather(props) {
                   >
                     Find A City
                   </button>
-
-                  <button
-                    className="btn btn-dark btn btn-primary btn-lg"
-                    type="submit"
-                    value="Current Location"
-                  >
-                    Current Location
-                  </button>
                 </form>
               </div>
             </div>
@@ -102,6 +95,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <Loader type="Bars" color="#000000" height={100} width={100} />;
   }
 }
