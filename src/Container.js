@@ -4,7 +4,6 @@ import "./CurrentInfo.css";
 import "./Forecast.css";
 import "./SearchBar.css";
 import CurrentInfo from "./CurrentInfo";
-import DateFormat from "./DateFormat";
 
 import axios from "axios";
 
@@ -50,22 +49,8 @@ export default function Weather(props) {
         <Row md={2}>
           <Col>
             {/*Receive info from Currentinfo component*/}
-            <div className="col-md currentweather CurrentInfo">
-              <p className="maincity">{props.city}</p>
-              <DateFormat date={props.date} className="time" />
-              <p className="bigtext">
-                {Math.round(props.temperature)}{" "}
-                <span className="degrees">°C / °F</span>
-              </p>
-              <p className="description">
-                {props.description} <img src={props.emoji} alt="Emoji" />
-              </p>
-              <p className="windspeed">
-                Wind Speed: {Math.round(props.wind)} km
-              </p>
-              <p className="precipitation">Humidity: {props.humidity} %</p>
-            </div>
-            {/*Send props for weatherData*/}
+
+            {/*Send props for weatherData to Current Info*/}
             <CurrentInfo data={weatherData} />
           </Col>
           <Col>

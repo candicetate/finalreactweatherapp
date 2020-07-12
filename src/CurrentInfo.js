@@ -1,7 +1,6 @@
 import React from "react";
 import "./CurrentInfo.css";
 import DateFormat from "./DateFormat";
-import Weather from "./Container";
 
 export default function CurrentInfo(props) {
   console.log(props.data);
