@@ -1,0 +1,119 @@
+CurrentInfo.body {
+  padding: 20 px;
+}
+
+.currentCity {
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+a.degrees-c {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+a.degrees-f {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 25px;
+}
+
+.maincity {
+  font-size: 60px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.active {
+  color: #000000;
+  cursor: default;
+}
+
+.currentweather {
+  background: none;
+  border: 5px solid #00000025;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.degrees {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 50px;
+}
+
+.degrees-c {
+  font-size: 50px;
+}
+
+.degrees-c.active {
+  color: #000000;
+  cursor: default;
+}
+
+.degrees-c.active:hover {
+  text-decoration: none;
+}
+
+.degrees-f {
+  font-size: 50px;
+}
+
+.degrees-f.active {
+  color: #000000;
+  cursor: default;
+}
+
+.degrees-f.active:hover {
+  text-decoration: none;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 15px;
+}
+
+.bigtext {
+  font-size: 105px;
+  font-weight: 900;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.windspeed {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 15px;
+}
+
+.precipitation {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 15px;
+  margin-bottom: 15px;
+}

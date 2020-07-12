@@ -1,0 +1,19 @@
+.SearchBar .active {
+  color: #000000;
+  cursor: default;
+}
+
+.SearchBar a#degrees-c {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.SearchBar a#degrees-f {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+  display: inline;
+  font-size: 15px;
+  line-height: 15px;
+  width: 350px;
+}

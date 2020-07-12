@@ -1,0 +1,35 @@
+.Forecast.col-md {
+  background: linear-gradient(
+    0deg,
+    rgba(185, 185, 185, 1) 0%,
+    rgba(205, 205, 205, 1) 36%,
+    rgba(244, 244, 244, 1) 74%,
+    rgba(252, 252, 252, 1) 100%
+  );
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.fiveday {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.futuretemp {
+  font-size: 25px;
+  line-height: 20px;
+  text-align: center;
+}
+
+#futuretemp {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+}
+
+#futuretemp img {
+  padding: 5px;
+}
