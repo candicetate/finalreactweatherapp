@@ -13,7 +13,7 @@ export default function CurrentInfo(props) {
       <DateFormat date={props.data.date} className="time" />
       <p className="bigtext">
         {/* Import Emoji */}
-        <Emoji code={props.data.icon} />
+        <Emoji code={props.data.emoji} />
         {/* Import Temperature Conversion */}
         <TempConvert celcius={props.data.temperature} />
       </p>
