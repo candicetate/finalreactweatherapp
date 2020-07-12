@@ -3,6 +3,7 @@ import "./Container.css";
 import "./CurrentInfo.css";
 import "./Forecast.css";
 import "./SearchBar.css";
+import CurrentInfo from "./CurrentInfo";
 import DateFormat from "./DateFormat";
 
 import axios from "axios";
@@ -15,6 +16,8 @@ import { Col } from "react-bootstrap";
 export default function Weather(props) {
   /* States to reload information */
   const [weatherData, showWeatherData] = useState({ ready: false });
+  /* Stores city name */
+  const [city, setCity] = useState(props.defaultCity);
   /* Function to run API call */
   function showTemperature(response) {
     console.log(response.data);
@@ -30,32 +33,40 @@ export default function Weather(props) {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  function handleChange(event) {
+    setCity(event.target.value);
+    alert(city);
+  }
+
   if (weatherData.ready) {
     return (
       /* Information display */
+
       <Container fluid="md" className="Container">
         <Row md={2}>
           <Col>
-            <div className="col-md currentweather">
-              <p className="maincity">{weatherData.city}</p>
-
-              <DateFormat date={weatherData.date} className="time" />
-
+            {/*Receive info from Currentinfo component*/}
+            <div className="col-md currentweather CurrentInfo">
+              <p className="maincity">{props.city}</p>
+              <DateFormat date={props.date} className="time" />
               <p className="bigtext">
-                {Math.round(weatherData.temperature)}{" "}
+                {Math.round(props.temperature)}{" "}
                 <span className="degrees">°C / °F</span>
               </p>
               <p className="description">
-                {weatherData.description}{" "}
-                <img src={weatherData.emoji} alt="Emoji" />
+                {props.description} <img src={props.emoji} alt="Emoji" />
               </p>
               <p className="windspeed">
-                Wind Speed: {Math.round(weatherData.wind)} km
+                Wind Speed: {Math.round(props.wind)} km
               </p>
-              <p className="precipitation">
-                Humidity: {weatherData.humidity} %
-              </p>
+              <p className="precipitation">Humidity: {props.humidity} %</p>
             </div>
+            {/*Send props for weatherData*/}
+            <CurrentInfo data={weatherData} />
           </Col>
           <Col>
             <div className="Forecast col-md">
@@ -79,12 +90,13 @@ export default function Weather(props) {
           <Col>
             <div className="row">
               <div className="col-12">
-                <form className="SearchBar">
+                <form className="SearchBar" onSubmit={handleSubmit}>
                   <input
                     className="form-control form-control-lg"
                     type="search"
                     placeholder="Search..."
                     autoComplete="off"
+                    onChange={handleChange}
                   />
 
                   <button
@@ -113,7 +125,7 @@ export default function Weather(props) {
   } else {
     /* API Information */
     let apiKey = "82748eb647aa94c9acf7aa6a08000727";
-    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(showTemperature);
 
     return "Loading...";
