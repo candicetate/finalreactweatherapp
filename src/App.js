@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className="App">
-      <Container />
-      <p class="footer">
+      <Container defaultCity="Vancouver" />
+      <p className="footer">
         <a href="https://github.com/candicetate/finalreactweatherapp">
           Open Source
         </a>{" "}
