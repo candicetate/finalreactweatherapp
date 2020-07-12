@@ -13,33 +13,45 @@ import { Col } from "react-bootstrap";
 
 export default function Weather() {
   /* States to reload information */
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, showWeatherData] = useState({ ready: false });
   /* Function to run API call */
   function showTemperature(response) {
     console.log(response.data);
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    showWeatherData({
+      ready: true,
+      city: response.data.name,
+      date: "Wednesday 7:00",
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      emojiURL: "http://openweathermap.org/img/wn/image.png",
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+    });
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       /* Information display */
       <Container fluid="md" className="Container">
         <Row md={2}>
           <Col>
             <div className="col-md currentweather">
-              <p className="maincity">Edmonton</p>
+              <p className="maincity">{weatherData.city}</p>
               <br />
-              <p className="time">Saturday July 11, 2020 at 12:00</p>
+              <p className="time">{weatherData.date}</p>
               <br />
               <p className="bigtext">
-                {Math.round(temperature)}{" "}
+                {Math.round(weatherData.temperature)}{" "}
                 <span className="degrees">°C / °F</span>
               </p>
-              <p className="description">Descrip. Emoji</p>
-              <p className="windspeed">Wind Speed: wind km</p>
-              <p className="precipitation">Humidity: 0 %</p>
+              <p className="description">
+                {weatherData.description}{" "}
+                <img src={weatherData.emoji} alt="Emoji" />
+              </p>
+              <p className="windspeed">Wind Speed: {weatherData.wind} km</p>
+              <p className="precipitation">
+                Humidity: {weatherData.humidity} %
+              </p>
             </div>
           </Col>
           <Col>
