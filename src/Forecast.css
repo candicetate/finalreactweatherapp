@@ -7,7 +7,9 @@
     rgba(252, 252, 252, 1) 100%
   );
   border-radius: 10px;
-  margin-bottom: 15px;
+  padding: 10px 0px;
+  margin: 10px 10px 10px 0px;
+  width: 465px;
 }
 
 .fiveday {
@@ -32,4 +34,8 @@
 
 #futuretemp img {
   padding: 5px;
+}
+
+.Forecast canvas {
+  size: 25px;
 }

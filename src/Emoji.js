@@ -28,7 +28,7 @@ export default function Emoji(props) {
     <ReactAnimatedWeather
       icon={codeMapping[props.code]}
       color="black"
-      size={80}
+      size={50}
       animate={true}
     />
   );

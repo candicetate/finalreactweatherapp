@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./Container.css";
-import "./CurrentInfo.css";
-import "./Forecast.css";
 import "./SearchBar.css";
 import CurrentInfo from "./CurrentInfo";
+import Forecast from "./Forecast";
 
 import axios from "axios";
 
@@ -52,21 +51,9 @@ export default function Weather(props) {
             <CurrentInfo data={weatherData} />
           </Col>
           <Col>
-            <div className="Forecast col-md">
-              <p className="fiveday">Hourly Forecast</p>
-
-              <p className="futuretemp">temp°C emoji at time</p>
-
-              <p className="futuretemp">temp°C emoji at time</p>
-
-              <p className="futuretemp">temp°C emoji at time</p>
-
-              <p className="futuretemp">temp°C emoji at time</p>
-
-              <p className="futuretemp">temp°C emoji at time</p>
-
-              <p className="futuretemp">temp°C emoji at time</p>
-            </div>
+            {/*Receive info from Forecast component*/}
+            {/*Send props for weatherData to Forecast*/}
+            <Forecast city={weatherData.city} />
           </Col>
         </Row>
         <Row>

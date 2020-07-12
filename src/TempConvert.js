@@ -19,7 +19,7 @@ export default function TempConvert(props) {
 
   if (unit === "celcius") {
     return (
-      <p className="bigtext">
+      <span className="bigtext">
         {Math.round(props.celcius)}
         <span className="degrees">
           <sup>
@@ -29,11 +29,11 @@ export default function TempConvert(props) {
             </a>
           </sup>
         </span>
-      </p>
+      </span>
     );
   } else {
     return (
-      <p className="bigtext">
+      <span className="bigtext">
         {Math.round(fahrenheit())}
         <span className="degrees">
           <sup>
@@ -43,7 +43,7 @@ export default function TempConvert(props) {
             | °F
           </sup>
         </span>
-      </p>
+      </span>
     );
   }
 }
