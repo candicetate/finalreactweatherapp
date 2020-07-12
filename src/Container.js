@@ -38,7 +38,6 @@ export default function Weather(props) {
 
   function handleChange(event) {
     setCity(event.target.value);
-    alert(city);
   }
 
   if (weatherData.ready) {
@@ -49,7 +48,6 @@ export default function Weather(props) {
         <Row md={2}>
           <Col>
             {/*Receive info from Currentinfo component*/}
-
             {/*Send props for weatherData to Current Info*/}
             <CurrentInfo data={weatherData} />
           </Col>

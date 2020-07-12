@@ -2,6 +2,7 @@ import React from "react";
 import "./CurrentInfo.css";
 import DateFormat from "./DateFormat";
 import Emoji from "./Emoji";
+import TempConvert from "./TempConvert";
 
 export default function CurrentInfo(props) {
   console.log(props.data);
@@ -12,8 +13,9 @@ export default function CurrentInfo(props) {
       <DateFormat date={props.data.date} className="time" />
       <p className="bigtext">
         {/* Import Emoji */}
-        <Emoji code={props.data.icon} /> {Math.round(props.data.temperature)}
-        <sup className="degrees">°C | °F</sup>
+        <Emoji code={props.data.icon} />
+        {/* Import Temperature Conversion */}
+        <TempConvert celcius={props.data.temperature} />
       </p>
       <p className="description">{props.data.description}</p>
       <p className="windspeed">Wind Speed: {Math.round(props.data.wind)} km</p>
