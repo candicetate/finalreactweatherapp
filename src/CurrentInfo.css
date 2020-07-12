@@ -1,4 +1,4 @@
-CurrentInfo.body {
+.CurrentInfo.body {
   font-family: "Nunito", sans-serif;
   padding: 20 px;
 }
@@ -13,14 +13,6 @@ CurrentInfo.body {
   font-size: 60px;
   font-weight: 900;
   text-transform: capitalize;
-}
-
-a.degrees-c {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-a.degrees-f {
-  color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -66,18 +58,17 @@ p {
 }
 
 .degrees {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 25px;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 30px;
   font-weight: 400;
-  vertical-align: super;
+  vertical-align: top;
 }
 
-.degrees.active {
-  color: #000000;
-  cursor: default;
+a.degrees {
+  color: rgba(0, 0, 0, 0.75);
 }
 
-.degrees.active:hover {
+a:hover {
   text-decoration: none;
 }
 
@@ -91,8 +82,9 @@ p {
 
 .bigtext {
   font-size: 105px;
-  line-height: 110px;
+  line-height: 105px;
   font-weight: 900;
+  margin: 0 px;
 }
 
 .time {
