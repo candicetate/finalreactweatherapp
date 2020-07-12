@@ -13,7 +13,7 @@ export default function CurrentInfo(props) {
         <span className="degrees">°C / °F</span>
       </p>
       <p className="description">
-        {props.data.description} <img src={props.data.emoji} alt="Emoji" />
+        {props.data.description} <img src={props.data.emojiURL} alt="Emoji" />
       </p>
       <p className="windspeed">Wind Speed: {Math.round(props.data.wind)} km</p>
       <p className="precipitation">Humidity: {props.data.humidity} %</p>
