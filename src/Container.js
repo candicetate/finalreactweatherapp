@@ -15,15 +15,13 @@ export default function Weather() {
       <Row md={2}>
         <Col>
           <div className="col-md currentweather">
-            <span className="maincity">Edmonton</span>
+            <p className="maincity">Edmonton</p>
             <br />
-            <span className="time">
-              Saturday July 11, 2020
-              <br />
-              at 12:00
-            </span>
+            <p className="time">Saturday July 11, 2020 at 12:00</p>
             <br />
-            <span className="bigtext">10</span>
+            <p className="bigtext">
+              10 <span className="degrees">°C / °F</span>
+            </p>
             <p className="description">Descrip. Emoji</p>
             <p className="windspeed">Wind Speed: wind km</p>
             <p className="precipitation">Humidity: 0 %</p>
