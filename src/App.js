@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./Footer.css";
 import Container from "./Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 

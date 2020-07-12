@@ -11,9 +11,13 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-.form-control {
+button.btn.btn-dark.btn-primary.btn-lg {
+  display: inline;
+}
+
+input.form-control.form-control-lg {
   display: inline;
   font-size: 15px;
   line-height: 15px;
-  width: 350px;
+  width: 500px;
 }

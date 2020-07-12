@@ -2,21 +2,21 @@
   display: block;
   font-size: 12px;
   margin: 0 auto;
+  padding: 15px 15px 15px 15px;
   text-align: center;
-  padding-top: 15px 15px 15px 15px;
 }
 
 footer.p {
   display: block;
   font-size: 12px;
   margin: 0 auto;
+  padding: 15px 15px 15px 15px;
   text-align: center;
-  padding-top: 15px 15px 15px 15px;
 }
 
 a.footer {
   color: #000000;
-  font-size: 12px;
   display: inline;
+  font-size: 12px;
   text-decoration: underline;
 }
