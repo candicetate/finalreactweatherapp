@@ -12,12 +12,13 @@ export default function CurrentInfo(props) {
       {/* Import Date */}
       <DateFormat date={props.data.date} className="time" />
       <p className="bigtext">
-        {/* Import Emoji */}
-        <Emoji code={props.data.emoji} />
         {/* Import Temperature Conversion */}
         <TempConvert celcius={props.data.temperature} />
       </p>
-      <p className="description">{props.data.description}</p>
+      <p className="description">
+        {/* Import Emoji */}
+        <Emoji code={props.data.emoji} /> {props.data.description}
+      </p>
       <p className="windspeed">Wind Speed: {Math.round(props.data.wind)} km</p>
       <p className="precipitation">Humidity: {props.data.humidity} %</p>
     </div>
